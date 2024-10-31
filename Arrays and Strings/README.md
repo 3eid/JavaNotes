@@ -10,7 +10,7 @@ public class Main {
 }
 ```
 It compares references not the actual string content. Instead we can use:
-```
+```java
 public class Main {
     public static void main(String[] args) {
         String s = new String("Hi");
@@ -21,7 +21,7 @@ public class Main {
 ```
 
 Note that if we define string without the new keyword it make the object in the string pool.
-```
+```java
 public class Main {
     public static void main(String[] args) {
         String s1 = "Hi";
