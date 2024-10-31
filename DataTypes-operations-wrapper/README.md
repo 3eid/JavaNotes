@@ -43,7 +43,7 @@
     }
     ```
 ### Literals
-![enter image description here](https://i.ibb.co/jz0YWyL/image.png)
+![](https://i.ibb.co/DRgW5gZ/image.png)
 ```java
     int i = 0x1A;
     int b = 0b0111;
@@ -95,6 +95,7 @@ public class Main {
 
 ### modulo signed
 ![image](https://i.ibb.co/fDJ29yV/image.png)
+
 takes the sign of the Numerator 
 
 
