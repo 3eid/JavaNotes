@@ -76,7 +76,7 @@ A `final` variable can only be assigned once, making it a constant after it has 
 A `static` variable belongs to the class itself rather than to any instance. This means all instances of the class share the same value for that variable.
 
 **`transient:`**  
-A `transient` variable is ignored during serialization. It’s used when certain variables do not need to be saved.
+A `transient` variable is ignored during serialization. It’s used when certain variables do not need to be saved, or for security concerns if sending through network.
 
 **`volatile:`**  
 A `volatile` variable is stored in main memory and is visible to all threads. It ensures that any change to this variable is immediately reflected across all threads.
