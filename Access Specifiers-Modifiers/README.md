@@ -1,25 +1,8 @@
-## Java Access Specifiers and Modifiers
 
-![image](https://github.com/user-attachments/assets/823aa0c0-b216-4652-884d-94d49c6efdea)
 ## Java Access Specifiers and Modifiers
 
 ![image](https://github.com/user-attachments/assets/823aa0c0-b216-4652-884d-94d49c6efdea)
 ![image](https://github.com/user-attachments/assets/7ceaedf3-f9d5-4be1-87d2-b122a1dc58aa)
-
- ### Class specifiers
-
-**`public class: `**
- A class marked with the `public` keyword **can be accessed from any package**. This means it’s visible throughout the entire application. You can import and use a `public` class in other packages.
- 
-**`default class (Package-Private):`** 
-A class without any access modifier (neither `public`, `protected`, nor `private`) is a default or package-private class. It’s **only accessible within the same package**, so you can't directly import and use it in classes outside its package.
-**Important Note:**
-You can import a public class that contains methods or fields using default classes, but the default classes themselves are not directly accessible from outside their package. This allows you to hide implementation details within a package, enhancing abstraction by exposing only the public API.
-**`final class:  `**
- we cannot instantiate objects from this class.
-
-**`abstract class: `** 
-the class can't be instanciated, It has 1+ abstract method. We may need to make a class that has only static methods and we don't want to make objects from it, ex: Math class.
 
 ### Class Specifiers
 
