@@ -20,6 +20,7 @@ A `final` class cannot be extended (no subclass can inherit from it). This is co
 
 **`abstract class:`**  
 An `abstract` class cannot be instantiated. It contains one or more abstract methods (methods without a body) which must be implemented by subclasses. Abstract classes are used to define a template for subclasses. For example, if you want to enforce certain methods in subclasses, you can define those methods as abstract in an abstract class.
+Note: we use abstract class without abstract methods at all, instead we may have static methods that return the object, we may want to preserve the data in someway, etc.
 
 ----------
 
@@ -50,7 +51,7 @@ An `abstract` method has no body and must be implemented by subclasses of an abs
 A `synchronized` method can only be accessed by one thread at a time. This is commonly used to prevent race conditions in concurrent applications.
 
 **`native:`**  
-A `native` method is implemented in another language, like C or C++. It’s used when Java alone cannot provide certain functionalities, for example, interacting with OS-specific features.
+A `native` method is implemented in another language, like C or C++. It’s used when Java alone cannot provide certain functionalities, for example, interacting with OS-specific features. It's SUPER USEFUL in dynamic binding.
 
 ----------
 
