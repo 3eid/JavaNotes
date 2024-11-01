@@ -79,3 +79,75 @@ A `transient` variable is ignored during serialization. It’s used when certain
 
 **`volatile:`**  
 A `volatile` variable is stored in main memory and is visible to all threads. It ensures that any change to this variable is immediately reflected across all threads.
+
+## Additional Notes
+
+#### Common Constructor body
+
+In Java, you can define a block of code outside of any method, known as common constructor body, which get executed before instantiating any object, whatever which constructor is used.
+```java
+public class Example {
+    {
+        // Common Constructor body: runs with each instance creation
+        System.out.println("Instance created!");
+    }
+}
+```
+
+#### Free-Floating Block
+
+In Java, you can define a block of code outside of any method, known as common constructor body, which get executed before instantiating any object, whatever which constructor is used.
+```java
+public class Example {
+    static {
+        // Free-Floating Block: runs once in class lifetime when loaded to memory
+        System.out.println("Class loaded!");
+    }
+}
+```
+To understand the differences:
+
+```java
+public class Person {
+	// Free-Floating Block: runs once in class lifetime when loaded to memory
+    static {
+	        System.out.println("Class loaded!");
+	}
+    private String name;
+    private int age;
+	
+
+    // Common Constructor body: runs with each instance creation (Instance initializer block)
+    
+    {
+        // This block runs with each instance creation, before the constructor body
+        System.out.println("An instance of Person is being created!");
+    }
+
+    // Constructor 1
+    public Person() {
+        this.name = "Unknown";
+        this.age = 0;
+        System.out.println("Default constructor called.");
+    }
+
+    // Constructor 2
+    public Person(String name) {
+        this.name = name;
+        this.age = 0;
+        System.out.println("Constructor with name parameter called.");
+    }
+
+
+    public static void main(String[] args) {
+        
+        // prints "Class loaded!" one time from the Free-Floating Block when class loaded to memory       
+        Person person1 = new Person(); // prints "An instance of Person is being created!"
+								       //"Default constructor called."
+        Person person2 = new Person("Alice");   // prints "An instance of Person is being created!"
+										       //"Constructor with name parameter called."
+        
+    }
+}
+
+```
