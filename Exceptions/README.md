@@ -232,7 +232,37 @@ public class CustomException extends Exception {
 ```
 ----------
 
-### 12. **Using `|` Operator with Exceptions**
+### 12. **Handling Multiple Exceptions and General Exception**
+
+multiple exceptions can be handled in a single `try-catch` block by adding multiple `catch` clauses, each handling a different type of exception.
+```java
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+public class MultiCatchExample {
+
+    public static void main(String[] args) {
+        try {
+            readFile("non_existent_file.txt");
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found: " + e.getMessage());
+        } catch (IOException e) {
+            System.out.println("An I/O error occurred: " + e.getMessage());
+        }
+        } catch (Exception e) { System.out.println("An error occurred: " + e.getMessage()); }
+    }
+
+    public static void readFile(String fileName) throws IOException, FileNotFoundException {
+        throw new FileNotFoundException("File does not exist"); // Example exception
+    }
+}
+
+``` 
+
+----------
+
+
+### 13. **Using `|` Operator with Exceptions**
 
 From Java 7 onward, you can catch multiple exceptions in a single `catch` block using `|` (multi-catch).
 
@@ -247,7 +277,7 @@ try {
 
 ----------
 
-### 13. **Considerations in Exception Handling**
+### 14. **Considerations in Exception Handling**
 
 -   **Catch Child Classes Before Parent**: Always catch specific exceptions (like `IOException`) before generic ones (`Exception`) in a `catch` chain to prevent unreachable code.
 -   **Overriding Methods with Exceptions**: When overriding a method that throws an exception, the overridden method can only:-
@@ -257,7 +287,7 @@ try {
 
 ----------
 
-### 14. **`try-with-resources` (Auto-Closeable Resources)**
+### 15. **`try-with-resources` (Auto-Closeable Resources)**
 
 `try-with-resources` automatically closes resources (e.g., files) after execution, even if an exception occurs.
 
@@ -268,6 +298,7 @@ try (FileInputStream file = new FileInputStream("file.txt")) {
     System.out.println("File handling error.");
 }
 ``` 
+
 ----------
 
 Using exception handling effectively is crucial to building resilient and user-friendly Java applications, allowing for error management and resource cleanup in a structured, maintainable way.
