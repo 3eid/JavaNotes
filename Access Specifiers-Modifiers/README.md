@@ -20,7 +20,17 @@ A `final` class cannot be extended (no subclass can inherit from it). This is co
 
 **`abstract class:`**  
 An `abstract` class cannot be instantiated. It contains one or more abstract methods (methods without a body) which must be implemented by subclasses. Abstract classes are used to define a template for subclasses. For example, if you want to enforce certain methods in subclasses, you can define those methods as abstract in an abstract class.
-Note: we use abstract class without abstract methods at all, instead we may have static methods that return the object, we may want to preserve the data in someway, etc.
+Note: we use the abstract class without abstract methods at all, instead we may have static methods that return the object, we may want to preserve the data in some way, etc.
+
+**`static class:`**  
+	- A nested class declared as static does not access members of the outer class.
+	- It belongs to the parent class's metadata and is shared efficiently to save memory.
+	- Use when the nested class is independent of the outer class instance.
+
+**`private class:`**  
+	- A nested class declared as private is only accessible within the parent class.
+	- Enhances encapsulation and prevents external access.
+	- Use when the class is tightly coupled to the implementation of the parent class and not needed elsewhere.
 
 ----------
 
