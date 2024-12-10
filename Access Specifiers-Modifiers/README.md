@@ -25,6 +25,7 @@ Note: we use the abstract class without abstract methods at all, instead we may 
 **`static class:`**  
 - A nested class declared as static does not access members of the outer class.
 - It belongs to the parent class's metadata and is shared efficiently to save memory.
+- if you don't use any instance members of the outer class, make the nested class static.
 **`private class:`**  
 - A nested class declared as private is only accessible within the parent class.
 - Enhances encapsulation and prevents external access.
