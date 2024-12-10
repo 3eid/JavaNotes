@@ -23,14 +23,14 @@ An `abstract` class cannot be instantiated. It contains one or more abstract met
 Note: we use the abstract class without abstract methods at all, instead we may have static methods that return the object, we may want to preserve the data in some way, etc.
 
 **`static class:`**  
-	- A nested class declared as static does not access members of the outer class.
-	- It belongs to the parent class's metadata and is shared efficiently to save memory.
-	- Use when the nested class is independent of the outer class instance.
+- A nested class declared as static does not access members of the outer class.
+- It belongs to the parent class's metadata and is shared efficiently to save memory.
+- Use when the nested class is independent of the outer class instance.
 
 **`private class:`**  
-	- A nested class declared as private is only accessible within the parent class.
-	- Enhances encapsulation and prevents external access.
-	- Use when the class is tightly coupled to the implementation of the parent class and not needed elsewhere.
+- A nested class declared as private is only accessible within the parent class.
+- Enhances encapsulation and prevents external access.
+- Use when the class is tightly coupled to the implementation of the parent class and not needed elsewhere.
 
 ----------
 
